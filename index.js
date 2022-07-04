@@ -10,14 +10,14 @@ let raio = diametro / 2
 let colidiu = false;
 
 // PROPRIEDADES DA RAQUETE
-let xRaquete = 85;
+let xRaquete = 10;
 let yRaquete = 150;
 let comprimentoRaquete = 15;
 let alturaRaquete = 60;
 
 // PROPRIEDADES DA RAQUETE OPONENTE
 
-let xRaqueteo = 700;
+let xRaqueteo = 775;
 let yRaqueteo = 150;
 let comprimentoRaqueteo = 15;
 let alturaRaqueteo = 60;
@@ -45,7 +45,7 @@ function draw() {
   verificaColisaoRaquete(xRaqueteo, yRaqueteo);
   incluiPlacar();
   marcaponto();
-
+  bolinhaNaoFicaPresa();
 }
 
 // FUNÇÕES
@@ -79,7 +79,7 @@ function movimentoRaquete(){
 
 function movimentoRaqueteOponente(){
   // ERRO
-  if ((Math.trunc(Math.random() *20 + 1)) < 10) {
+  if ((Math.trunc(Math.random() *25 + 1)) < 10) {
     velocidadeYDoOponente = yBolinha - yRaqueteo - 62 //erro
     yRaqueteo += velocidadeYDoOponente
   } else {
@@ -112,5 +112,13 @@ function marcaponto(){
   }
   if(xBolinha < 5){
     pontosDoOponente +=1;
+  }
+}
+function bolinhaNaoFicaPresa(){
+  if (xBolinha - raio < 4){
+  xBolinha = 20
+  }
+  if (xBolinha - raio > 796){
+    xBolinha = 780
   }
 }
