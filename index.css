@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Fredericka+the+Great&display=swap');
+
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  font-family: 'Cinzel', serif;
+  font-size: 62.5%;
+}
+.position1 {
+  position: absolute;
+  top: -4%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.position2 {
+  position: absolute;
+  top: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.style {
+  text-transform: uppercase;
+  color: #f8f9fa;
+  font-size: 2rem;
+}
+.seta {
+  width: 40px;
+  height: auto;
+  align-items: center;
+  filter: invert(77%) sepia(44%) saturate(2939%) hue-rotate(92deg) brightness(200%) contrast(107%);;
+}
